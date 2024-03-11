@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { type_second } from "@/functions/fonts";
 import "./globals.css";
 import Header from "@/components/header"
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +20,13 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={type_second.className}>
-        <Header />
-        {children}
+        <div className="flex flex-col min-h-screen md:min-h-[calc(100vh + 10rem)]">
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
