@@ -1,9 +1,11 @@
+import LoginForm from '@/components/login/login-form';
 import React from 'react';
 
 const LoginPage = () => {
     return (
-        <section>
-            <h1>Login Page</h1>
+        <section className='animeLeft'>
+            <h1 className='title'>Login</h1>
+            <LoginForm />
         </section>
     );
 };
