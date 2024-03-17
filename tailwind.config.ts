@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         purple_500: "#391386",
+        purple_700: "#230c54",
         red_400: "#FA2E70",
       },
     },

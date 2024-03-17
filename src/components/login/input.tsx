@@ -17,7 +17,7 @@ export default function Input({ label, error, ...props }: InputProps) {
             <label className=" block text-base pb-2" htmlFor={props.name}>
                 {label}
             </label>
-            <input className="border border-gray-300 block w-full text-base px-4 py-2 rounded-md bg-gray-200 transition duration-200 focus:outline-none focus:border-yellow-500 hover:border-yellow-500 hover:bg-white focus:shadow-outline-yellow" type="text" id={props.name} {...props} />
+            <input className="border border-gray-300 block w-full text-base px-4 py-2 rounded-md bg-gray-200 transition duration-200 focus:outline-none focus:border-purple_500 hover:border-purple_500 hover:bg-white focus:shadow-outline-yellow" type="text" id={props.name} {...props} />
             {error && <p className="text-red-600 text-sm mt-1">{error}</p>}
         </div>
     );
