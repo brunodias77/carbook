@@ -1,9 +1,10 @@
 import React from 'react';
 
-type InputProps1 = React.ComponentProps<'input'> & {
-    label: string;
-    error?: string;
-};
+// Um jeito diferente de tipar um elemento do html no typescript !!!!
+// type InputProps1 = React.ComponentProps<'input'> & {
+//     label: string;
+//     error?: string;
+// };
 
 type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
     label: string;
