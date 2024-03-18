@@ -16,3 +16,15 @@ export function PASSWORD_LOST() {
     url: API_URL + "/api/password/lost",
   };
 }
+
+export function PASSWORD_RESET() {
+  return {
+    url: API_URL + "/api/password/reset",
+  };
+}
+
+export function USER_GET() {
+  return {
+    url: API_URL + "/api/user",
+  };
+}

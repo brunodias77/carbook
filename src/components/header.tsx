@@ -3,9 +3,10 @@ import Image from 'next/image';
 import Logo from '../../public/assets/logo2.svg';
 import LogoUser from '../../public/assets/usuario.svg';
 import Link from "next/link"
+import userGet from '@/actions/user-get';
 
-const Header = () => {
-    const user = true;
+const Header = async () => {
+    const { data } = await userGet();
     return (
         <header className="fixed top-0 w-full z-50 bg-white shadow-md">
             <nav className="flex justify-between items-center h-16 container mx-auto max-w-screen-lg px-4">
@@ -15,10 +16,10 @@ const Header = () => {
                     </Link>
                 </div>
                 <div className="login text-gray-700 flex items-center">
-                    {user
+                    {data
                         ?
                         (<Link href="/account" className='flex items-center justify-center gap-2'>
-                            <span className="ml-1">Bruno</span>
+                            <span className="ml-1">{data.username} </span>
                             <Image src={LogoUser} alt="Car Book" height={20} width={20} />
                         </Link>)
                         :
