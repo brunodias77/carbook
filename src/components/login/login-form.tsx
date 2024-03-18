@@ -36,7 +36,7 @@ const LoginForm = () => {
                 <ErrorMessage error={state.error} />
                 <FormButton />
             </form>
-            <Link className='inline-block text-gray-600 py-2 leading-none' href="/login/forgot" >Perdeu a senha ?</Link>
+            <Link className='inline-block text-gray-600 py-2 leading-none underline' href="/login/forgot" >Perdeu a senha ?</Link>
             <div className='my-16'>
                 <h2 className='leading-none text-5xl relative'>
                     Cadastre-se

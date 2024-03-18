@@ -11,15 +11,15 @@ function FormButton() {
     return (
         <>
             {pending ? (
-                <Button disabled={pending}>Cadastrando...</Button>
+                <Button disabled={pending}>Enviando...</Button>
             ) : (
-                <Button>Cadastrar</Button>
+                <Button>Enviar email</Button>
             )}
         </>
     );
 }
 
-const LoginRegisterForm = () => {
+const LoginForgotForm = () => {
     const [state, action] = useFormState(userPost, {
         ok: false,
         error: '',
@@ -31,13 +31,11 @@ const LoginRegisterForm = () => {
     }, [state.ok]);
     return (
         <form action={action} className="">
-            <Input label="Usuário" name="username" type="text" />
-            <Input label="Email" name="email" type="email" />
-            <Input label="Senha" name="password" type="password" />
+            <Input label="Email / Usuário" name="login" type="text" />
             <ErrorMessage error={state.error} />
             <FormButton />
         </form>
     );
 };
 
-export default LoginRegisterForm;
+export default LoginForgotForm;
