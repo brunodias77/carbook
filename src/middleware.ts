@@ -3,7 +3,10 @@ import verifyToken from "./functions/verify-token";
 
 export async function middleware(request: NextRequest) {
   const token = request.cookies.get("token")?.value;
+  console.log("Aqui vendo se pego o token pelo middleware", token);
   const authenticated = token ? true : false;
+  console.log("Aqui vendo se o authenticated está funcionando");
+  console.log(authenticated);
   if (!authenticated && request.nextUrl.pathname.startsWith("/account")) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
