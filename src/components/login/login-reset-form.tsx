@@ -1,6 +1,6 @@
 'use client';
-import Button from './button';
-import Input from './input';
+import Button from '@/components/form/button';
+import Input from '@/components/form/input';
 import ErrorMessage from '../helper/error-message';
 import React from 'react';
 import passwordReset from '@/actions/password-reset';

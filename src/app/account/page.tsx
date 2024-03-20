@@ -1,10 +1,11 @@
-"use client"
 import React from 'react';
-import { useUser } from '@/context/user-context';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Minha conta",
+};
 
 const AccountPage = () => {
-    const { user } = useUser();
-    console.log(user);
     return (
         <div>
             <h1>Account Page</h1>

@@ -2,10 +2,11 @@
 import React from 'react';
 import { useFormState, useFormStatus } from 'react-dom';
 import login from '../../actions/login';
-import Input from './input';
-import Button from './button';
+import Input from '@/components/form/input';
+import Button from '@/components/form/button';
 import ErrorMessage from '../helper/error-message';
 import Link from 'next/link';
+import { useUser } from '@/context/user-context';
 
 function FormButton() {
     const { pending } = useFormStatus();
@@ -28,8 +29,10 @@ const LoginForm = () => {
     React.useEffect(() => {
         if (state.ok) window.location.href = '/account';
     }, [state.ok]);
+    const { user } = useUser();
     return (
         <>
+            {user?.email}
             <form action={action} className='mb-8'>
                 <Input label="Usuário" name="username" type="text" />
                 <Input label="Senha" name="password" type="password" />

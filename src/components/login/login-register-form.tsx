@@ -1,9 +1,9 @@
 "use client"
 import React from 'react';
-import Input from './input';
+import Input from '@/components/form/input';
 import ErrorMessage from '../helper/error-message';
 import { useFormState, useFormStatus } from 'react-dom';
-import Button from './button';
+import Button from '@/components/form/button';
 import userPost from '@/actions/user-post';
 
 function FormButton() {
